@@ -20,7 +20,7 @@ html {
   overflow: hidden;
   &-info {
     padding-top: 60px;
-    min-width: 700px;
+    width: 700px;
     max-width: 800px;
     h1 {
       font-size: 5rem;
@@ -43,6 +43,10 @@ html {
       margin-top: 40px;
       font-size: 1.2rem;
     }
+  }
+  &-img {
+    width: 30%;
+    height: auto;
   }
 }
 
@@ -315,3 +319,64 @@ footer {
 }
 
 // End of footer
+@media (max-width: 1205px) {
+  .section2-card p {
+    font-size: .8rem;
+  }
+  .grid-cell {
+    width: 150px;
+    i {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  #toggle-menu {
+    display: block;
+  }
+  .navbar a,
+  .navbar button {
+    display: none;
+  }
+  nav,
+  .section1,
+  .section2,
+  .section3,
+  footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .section1 {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    button {
+      float: inherit;
+      ;
+    }
+    .section1-img {
+      width: 100%;
+      order: 1;
+      img {
+        size: cover;
+      }
+    }
+    .section1-info {
+      order: 2;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .section2-feature {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -45,7 +45,11 @@ nav {
       outline: none;
     }
   }
-  #toggle-menu {
-    display: none;
-  }
+}
+
+#toggle-menu {
+  display: none;
+  font-size: 2rem;
+  color: $gray2;
+  cursor: pointer;
 }

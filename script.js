@@ -20,7 +20,6 @@ async function fetchNewLink() {
 
   let newLinkJson = await postLink(input.value)
 
-
   let newLink = await getShortLink(newLinkJson)
   console.log(newLink)
 }
