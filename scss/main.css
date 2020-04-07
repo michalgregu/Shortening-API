@@ -150,6 +150,15 @@ html {
           flex-direction: column;
 }
 
+.feature-wrapper small {
+  font-style: italic;
+  color: #f46262;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  display: none;
+}
+
 .section2-feature {
   position: relative;
   top: -85px;
