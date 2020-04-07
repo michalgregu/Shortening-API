@@ -8,7 +8,7 @@
 
 nav {
   display: block;
-  padding: 40px 140px;
+  padding: 40px 140px 70px 140px;
   position: relative;
   font-weight: 700;
 }
@@ -21,7 +21,7 @@ nav img {
   top: 6px;
 }
 
-nav .navbar {
+.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,13 +34,21 @@ nav .navbar {
   padding-left: 2rem;
 }
 
-nav .navbar a {
+.navbar a {
   color: #9e9aa7;
   text-decoration: none;
   margin-right: 30px;
 }
 
-nav .navbar button {
+.navbar a:first-child {
+  margin-left: 20px;
+}
+
+.navbar a:hover {
+  color: #000;
+}
+
+.navbar-button, .section1-info button {
   height: 42px;
   color: #fff;
   background-color: #2acfcf;
@@ -48,10 +56,15 @@ nav .navbar button {
   width: 110px;
   border: none;
   font-weight: 700;
-  margin-left: 40px;
+  margin-left: 20px;
+  cursor: pointer;
 }
 
-nav .navbar #toggle-menu {
+.navbar-button:hover, .section1-info button:hover {
+  background-color: #38f0f0;
+}
+
+.navbar #toggle-menu {
   display: none;
 }
 
@@ -60,6 +73,45 @@ button {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 18px;
+}
+
+.section1 {
+  padding: 0 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section1-info {
+  padding-top: 60px;
+  min-width: 700px;
+  max-width: 800px;
+}
+
+.section1-info h1 {
+  font-size: 5rem;
+  color: #35323e;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section1-info p {
+  padding-right: 120px;
+  color: #9e9aa7;
+  font-size: 1.4rem;
+}
+
+.section1-info button {
+  display: inline;
+  height: 55px;
+  width: 200px;
+  border-radius: 50px;
+  float: left;
+  margin-left: 0;
+  margin-top: 40px;
 }
 
 .attribution {

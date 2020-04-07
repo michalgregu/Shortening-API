@@ -1,6 +1,6 @@
 nav {
   display: block;
-  padding: 40px $padding;
+  padding: 40px $padding 70px $padding;
   position: relative;
   font-weight: 700;
   img {
@@ -10,28 +10,39 @@ nav {
     position: relative;
     top: 6px;
   }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 2rem;
-    a {
-      color: $gray2;
-      text-decoration: none;
-      margin-right: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  a {
+    color: $gray2;
+    text-decoration: none;
+    margin-right: 30px;
+    &:first-child {
+      margin-left: 20px;
     }
-    button {
-      height: 42px;
-      color: #fff;
-      background-color: $primary1;
-      border-radius: 20px;
-      width: 110px;
-      border: none;
-      font-weight: 700;
-      margin-left: 40px;
+    &:hover {
+      color: #000;
     }
-    #toggle-menu {
-      display: none;
+  }
+  &-button {
+    height: 42px;
+    color: #fff;
+    background-color: $primary1;
+    border-radius: 20px;
+    width: 110px;
+    border: none;
+    font-weight: 700;
+    margin-left: 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: hsl(180, 86%, 58%);
     }
+  }
+  #toggle-menu {
+    display: none;
   }
 }

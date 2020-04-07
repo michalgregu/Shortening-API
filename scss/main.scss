@@ -8,6 +8,39 @@ button {
   font-size: 18px;
 }
 
+.section1 {
+  padding: 0 $padding;
+  display: flex;
+  justify-content: space-between;
+  &-info {
+    padding-top: 60px;
+    min-width: 700px;
+    max-width: 800px;
+    h1 {
+      font-size: 5rem;
+      color: $gray3;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    p {
+      padding-right: 120px;
+      color: $gray2;
+      font-size: 1.4rem;
+    }
+    button {
+      @extend .navbar-button;
+      display: inline;
+      height: 55px;
+      width: 200px;
+      border-radius: 50px;
+      float: left;
+      margin-left: 0;
+      margin-top: 40px;
+    }
+  }
+  &-img {}
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
