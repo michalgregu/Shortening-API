@@ -8,11 +8,16 @@ button {
   font-size: 18px;
 }
 
+html {
+  height: 100%;
+}
+
 // Section1 
 .section1 {
   padding: 0 $padding 120px $padding;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   &-info {
     padding-top: 60px;
     min-width: 700px;
@@ -177,7 +182,85 @@ button {
 // End of section 2
 // -----------------
 // Section 3
+.section3 {
+  height: 300px;
+  background-color: $primary2;
+  background-image: url(/images/bg-boost-desktop.svg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h3 {
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  button {
+    @extend .navbar-button;
+    height: 55px;
+    width: 200px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+  }
+}
+
+// End of section 3
+// Footer
+footer {
+  position: relative;
+  height: 300px;
+  padding: 4rem $padding;
+  color: #fff;
+  background-color: $gray4;
+  margin-bottom: 0;
+  img {
+    float: left;
+    filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(102deg) brightness(101%) contrast(101%);
+  }
+}
+
+.footer-grid {
+  float: right;
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.grid-cell {
+  width: 200px;
+  ul {
+    list-style: none;
+  }
+  li {
+    color: $gray2;
+    font-size: 1rem;
+    line-height: 2;
+    &:first-child {
+      color: #fff;
+      margin-bottom: 1.5rem;
+      cursor: auto;
+      &:hover {
+        color: #fff;
+      }
+    }
+    cursor: pointer;
+    &:hover {
+      color: $primary1;
+    }
+  }
+  i {
+    padding-right: 1rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    &:hover {
+      color: $primary1;
+    }
+  }
+}
+
 .attribution {
+  position: absolute;
+  bottom: 10px;
   font-size: 11px;
   text-align: center;
 }
@@ -185,3 +268,5 @@ button {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+// End of footer
