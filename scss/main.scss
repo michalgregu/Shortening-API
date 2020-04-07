@@ -58,11 +58,16 @@ html {
   color: $gray3;
 }
 
+.feature-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .section2-feature {
   position: relative;
   top: -85px;
   padding: 50px;
-  margin-bottom: 60px;
   background-color: $primary2;
   width: 100%;
   display: flex;
@@ -102,7 +107,39 @@ html {
   }
 }
 
+.new-link-wrapper {
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  display: flex;
+  padding: 1rem;
+  padding-left: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+  top: -50px;
+  border-radius: 5px;
+  .old-link {
+    margin-right: auto;
+  }
+  .new-link {
+    color: $primary1;
+  }
+  .link-button {
+    @extend .navbar-button;
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
+    font-size: 1.2rem;
+  }
+  .link-button-clicked {
+    color: $primary2;
+  }
+}
+
 .section2-info {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
