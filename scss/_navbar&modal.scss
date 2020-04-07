@@ -41,6 +41,9 @@ nav {
     &:hover {
       background-color: hsl(180, 86%, 58%);
     }
+    &:focus {
+      outline: none;
+    }
   }
   #toggle-menu {
     display: none;

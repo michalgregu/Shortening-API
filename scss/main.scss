@@ -8,8 +8,9 @@ button {
   font-size: 18px;
 }
 
+// Section1 
 .section1 {
-  padding: 0 $padding;
+  padding: 0 $padding 120px $padding;
   display: flex;
   justify-content: space-between;
   &-info {
@@ -36,11 +37,88 @@ button {
       float: left;
       margin-left: 0;
       margin-top: 40px;
+      font-size: 1.2rem;
     }
   }
-  &-img {}
 }
 
+// End of section1
+// -----------------
+// Section2
+.section2 {
+  background-color: $gray1;
+  padding: 0 $padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $gray3;
+}
+
+.section2-feature {
+  position: relative;
+  top: -85px;
+  padding: 50px;
+  margin-bottom: 60px;
+  background-color: $primary2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 7px;
+  background-image: url(/images/bg-shorten-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  form {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    input {
+      width: 100%;
+      border-radius: 7px;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      padding-left: 30px;
+      color: $gray3;
+      &::placeholder {
+        color: $gray2;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      @extend .navbar-button;
+      height: 70px;
+      width: 200px;
+      border-radius: 7px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.section2-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 600px;
+  h3 {
+    width: 80%;
+    font-size: 2.8rem;
+    padding-bottom: 1rem;
+  }
+  p {
+    color: $gray2;
+    line-height: 1.8;
+  }
+}
+
+// End of section 2
+// -----------------
+// Section 3
 .attribution {
   font-size: 11px;
   text-align: center;
