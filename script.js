@@ -13,18 +13,17 @@ submit.addEventListener('click', e => {
   error.style.display = 'none'
   input.style.border = 'none'
 
-  fetchNewLink()
+  const newLink = fetchNewLink()
+  console.log(newLink)
+
 })
 
 async function fetchNewLink() {
-
-  let newLinkJson = await postLink(input.value)
-
-  let newLink = await getShortLink(newLinkJson)
-  console.log(newLink)
+  const newLinkId = await getNewLink(input.value)
+  const newShortLink = `https://rel.ink/${newLinkId}`
 }
 
-function postLink(input) {
+function getNewLink(input) {
   return fetch('https://rel.ink/api/links/', {
       method: 'POST',
       body: JSON.stringify({
@@ -35,11 +34,5 @@ function postLink(input) {
       }
     })
     .then(response => response.json())
-    .then(json => json)
-}
-
-function getShortLink(response) {
-  return fetch('https://rel.ink/api/links/' + response.hashid)
-    .then(result => result.json())
-    .then(newLink => newLink)
+    .then(json => json.hashid)
 }
