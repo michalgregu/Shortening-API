@@ -6,6 +6,7 @@ button {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 18px;
+  position: relative;
 }
 
 html {
@@ -146,7 +147,11 @@ html {
     font-size: 1.2rem;
   }
   .link-button-clicked {
-    color: $primary2;
+    background-color: $primary2;
+    &:hover {
+      cursor: auto;
+      background-color: $primary2;
+    }
   }
 }
 
@@ -285,6 +290,7 @@ footer {
     font-size: 1rem;
     line-height: 2;
     &:first-child {
+      font-weight: 800;
       color: #fff;
       margin-bottom: 1.5rem;
       cursor: auto;
@@ -372,11 +378,117 @@ footer {
       order: 2;
     }
   }
+  .old-link,
+  .new-link {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 800px) {
-  .section2-feature {
+  .section2-feature form {
     display: flex;
     flex-direction: column;
+    height: 140px;
+    button {
+      height: 70px;
+      width: 100%;
+      margin: 0;
+      margin-top: 20px;
+    }
+    input {
+      height: 70px;
+    }
+  }
+  .section2-info {
+    width: 85%;
+  }
+  .section2-cards {
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+  }
+  .section2-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    &:first-child {
+      margin-bottom: 100px;
+      align-self: auto;
+    }
+    &:nth-child(3) {
+      margin-top: 100px;
+      align-self: auto;
+    }
+  }
+  .section2-card p {
+    font-size: 1rem;
+  }
+  .line {
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 100%;
+    left: 49.10%;
+    background-color: $primary1;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    img {
+      margin-bottom: 40px;
+    }
+  }
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .grid-cell {
+    margin-bottom: 30px;
+    &:last-child {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .section1-img {
+    width: 80%;
+    img {
+      width: 100%;
+    }
+  }
+  .section1-info {
+    width: 90%;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .new-link-wrapper {
+    flex-direction: column;
+    height: 210px;
+  }
+  .new-link,
+  .old-link {
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    font-size: 1.3rem;
+    overflow: hidden;
+  }
+  .new-link-wrapper .link-button {
+    width: 100%;
+    margin: 0;
+  }
+  .section3 h3 {
+    font-size: 1.6rem;
   }
 }
