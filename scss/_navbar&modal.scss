@@ -48,10 +48,12 @@ nav {
 }
 
 #toggle-menu {
+  position: relative;
+  top: -10px;
   display: none;
-  font-size: 2rem;
   color: $gray2;
   cursor: pointer;
+  outline: none;
 }
 
 .modal {

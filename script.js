@@ -90,4 +90,5 @@ submit.addEventListener('click', e => {
 // Event listener - modal box
 toggleMenu.addEventListener('click', e => {
   modalBox.classList.toggle('modal-clicked')
+  toggleMenu.classList.toggle('is-active')
 })
