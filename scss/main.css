@@ -1956,6 +1956,15 @@ footer img {
 }
 
 .attribution a {
+  text-decoration: none;
+  color: #2acfcf;
+}
+
+.attribution a:visited {
+  color: #2acfcf;
+}
+
+.attribution a {
   color: #3e52a3;
 }
 

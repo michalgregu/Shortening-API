@@ -319,6 +319,13 @@ footer {
   bottom: 10px;
   font-size: 11px;
   text-align: center;
+  a {
+    text-decoration: none;
+    color: $primary1;
+    &:visited {
+      color: $primary1;
+    }
+  }
 }
 
 .attribution a {
